@@ -20,11 +20,13 @@ dssp_command <- function(pdb_file) {
   output_file <- gsub("\\.pdb.gz|\\.pdb", ".dssp", pdb_file)
 
   # Run the DSSP command with mkdssp, return error message if an error occurs.
-  system2(
-      command = .findExecutable(mkdssp),
-      args = c("-i", pdb_file, "-o", infile, "-out", output_file),
-      intern = TRUE
-    )
+  #system2(
+  #    command = .findExecutable(mkdssp),
+  #    args = c("-i", pdb_file, "-o", output_file),
+  #    intern = TRUE
+  #  )
+
+  system(paste(.findExecutable("mkdssp"), "-i", pdb_file, "-o", output_file))
   # system(command = paste0("mkdssp -i ", pdb_file, " -o ", output_file), intern = TRUE)
 
   # Return the name of the output file.
