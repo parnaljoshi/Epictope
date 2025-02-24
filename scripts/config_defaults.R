@@ -18,6 +18,7 @@ assign("br_weight", br_weight, envir = .GlobalEnv)
 # values should be from 0-1, with higher values indicating greater
 # suitability for tagging.
 ss_key <- list(
+    "P" = 0,
     "G" = 0,
     "H" = 0,
     "I" = 0,
