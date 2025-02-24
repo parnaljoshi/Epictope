@@ -14,7 +14,7 @@ calculate_scores <- function(feature_df) {
   normalized_entropy <- feature_df$shannon / 4.321928
 
   # Convert secondary structure symbols to numeric value
-  ss_score <- as.numeric(sapply(feature_df$ss, ss_convert))
+  ss_score <- as.numeric(unlist(sapply(feature_df$ss, ss_convert)))
 
   # Calculate relative solvent accessibility
   rsa <- feature_df$sasa / max_sasa[feature_df$aa]
