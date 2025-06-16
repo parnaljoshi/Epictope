@@ -13,7 +13,7 @@
 #'
 #' @export
 
-shannon_entropy <- function(seq, nogap = TRUE) {
+shannon_entropy <- function(seq, nogap = FALSE) {
   # Ensure that seq is a vector, not a list.
   seq <- unlist(seq)
 
@@ -24,9 +24,10 @@ shannon_entropy <- function(seq, nogap = TRUE) {
     # Exclude gaps if specified.
     unique_base <- unique_base[unique_base != "-"]
     adj_seq <- seq[seq != "-"]
-    print(adj_seq)
+    #print(adj_seq)
   } else {
     adj_seq <- seq
+    print(adj_seq)
   }
 
   # Get the length of the adjusted sequence.
