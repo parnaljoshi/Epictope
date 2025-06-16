@@ -24,6 +24,7 @@ shannon_entropy <- function(seq, nogap = TRUE) {
     # Exclude gaps if specified.
     unique_base <- unique_base[unique_base != "-"]
     adj_seq <- seq[seq != "-"]
+    print(adj_seq)
   } else {
     adj_seq <- seq
   }
