@@ -32,7 +32,6 @@ shannon_entropy <- function(seq, nogap = TRUE) {
 
   # Get the length of the adjusted sequence.
   M <- length(adj_seq)
-  print("M")
   print(M)
   print(unique_base)
 
@@ -45,9 +44,11 @@ shannon_entropy <- function(seq, nogap = TRUE) {
 
     # Count the number of occurrences.
     n_i <- sum(adj_seq == base)
+    print(n_i)
 
     # Calculate the probability.
     P_i <- n_i / M
+    print(P_i)
 
     # Calculate the entropy.
     entropy_i <- P_i * log2(P_i)
