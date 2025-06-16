@@ -17,8 +17,8 @@ shannon_entropy <- function(seq, nogap = TRUE) {
   # Ensure that seq is a vector, not a list.
   seq <- unlist(seq)
 
-  # # Take the unique bases in the sequence.
-  # unique_base <- unique(seq)
+  # Take the unique bases in the sequence.
+  unique_base <- unique(seq)
 
   if (nogap) {
     # Exclude gaps if specified.
