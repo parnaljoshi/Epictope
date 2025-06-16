@@ -17,8 +17,8 @@ shannon_entropy <- function(seq, nogap = TRUE) {
   # Ensure that seq is a vector, not a list.
   seq <- unlist(seq)
 
-  # Take the unique bases in the sequence.
-  unique_base <- unique(seq)
+  # # Take the unique bases in the sequence.
+  # unique_base <- unique(seq)
 
   if (nogap) {
     # Exclude gaps if specified.
@@ -32,6 +32,8 @@ shannon_entropy <- function(seq, nogap = TRUE) {
 
   # Get the length of the adjusted sequence.
   M <- length(adj_seq)
+  print(c("M", M))
+  print(unique_base)
 
   # Initialize a vector to store the entropy for each base.
   entropy_list <- numeric(length(unique_base))
