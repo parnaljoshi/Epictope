@@ -32,7 +32,8 @@ shannon_entropy <- function(seq, nogap = TRUE) {
 
   # Get the length of the adjusted sequence.
   M <- length(adj_seq)
-  print(c("M", M))
+  print("M")
+  print(M)
   print(unique_base)
 
   # Initialize a vector to store the entropy for each base.
