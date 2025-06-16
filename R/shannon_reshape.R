@@ -21,7 +21,7 @@ shannon_reshape <- function(msa, query) {
   ind <- which(chars != "-")
 
   # Calculate Shannon entropy for each column of the MSA
-  score <- apply(mat, 2, shannon_entropy, nogap = TRUE)
+  score <- apply(mat, 2, shannon_entropy, nogap = FALSE)
 
   # Return Shannon entropy for only query positions
   temp <- score[ind]
