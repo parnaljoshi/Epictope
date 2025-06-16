@@ -13,7 +13,7 @@
 #'
 #' @export
 
-shannon_entropy <- function(seq, nogap = FALSE) {
+shannon_entropy <- function(seq, nogap = TRUE) {
   # Ensure that seq is a vector, not a list.
   seq <- unlist(seq)
 
